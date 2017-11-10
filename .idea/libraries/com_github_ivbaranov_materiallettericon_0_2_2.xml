@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.github.ivbaranov:materiallettericon-0.2.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/7eba9a1fc393ef61c5c09d9eb62f31e4a0935281/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/7eba9a1fc393ef61c5c09d9eb62f31e4a0935281/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ivbaranov/materiallettericon/0.2.2/f1ee9de75e33e2515f4fe60dbef851b582fc583d/materiallettericon-0.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
