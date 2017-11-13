@@ -9,7 +9,12 @@
     tools:context="com.example.usuario.inventorymaterial.ui.login.LoginViewImpl"
     android:padding="@dimen/llo_login_margin"
     android:background="@color/colorPrimary"
+    android:id="@+id/android.R.id.content"
     >
+    <!--
+    android:id="@android:id/content" <- Ver funciona
+    android.R.id.content: id genérico para todas las activity para que los
+    usen los fragment-->
 
     <TextView
         android:id="@+id/txvSignIn"

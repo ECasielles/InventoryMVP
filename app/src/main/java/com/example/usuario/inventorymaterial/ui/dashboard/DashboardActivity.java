@@ -48,7 +48,7 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_support);
-        gdlDashboard = (GridLayout) findViewById(R.id.gdlDashboard);
+        gdlDashboard = (GridLayout) findViewById(R.id.android_R_id_content);
 
         final int INVENTARIO = View.generateViewId();
         final int PRODUCTO = View.generateViewId();

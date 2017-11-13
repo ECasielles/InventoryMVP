@@ -36,11 +36,11 @@ public class UserRepository {
      * Inicializa la estructura de datos DependencyRepository
      */
     private void initialize() {
-        saveUser(new User(1, "lourdes", "Lourdes","Lourdes Rodríguez",
+        saveUser(new User(1, "Lourdes", "lourdes","Lourdes Rodríguez",
                 "moronlu18@gmail.com", true, true));
-        saveUser(new User(2, "jesus", "Jesús","Jesús Rodríguez",
+        saveUser(new User(2, "Jesús", "jesus","Jesús Rodríguez",
                 "jesus2@gmail.com", false, false));
-        saveUser(new User(3, "angela", "Ángela", "Ángela Rodríguez",
+        saveUser(new User(3, "Ángela", "angela", "Ángela Rodríguez",
                 "angela16@gmail.com", false, false));
     }
     /**
@@ -64,7 +64,6 @@ public class UserRepository {
     public ArrayList<User> getUsers() {
         return users;
     }
-
     /**
      * Comprueba si un usuario existe en la base de datos
      * @param newuser Usuario que se quiere buscar en la BD
@@ -72,5 +71,9 @@ public class UserRepository {
      */
     public boolean isUserExists(User newuser) {
         return true;
+    }
+    public boolean validateCredentials(String name, String password) {
+        User user = new User(0, name, password, null, null, false, false);
+        return users.get(users.indexOf(user)).getPassword().equals(password);
     }
 }

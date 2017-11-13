@@ -80,8 +80,9 @@ public class User {
 
         User user1 = (User) o;
 
-        if (!getUser().equals(user1.getUser())) return false;
-        return getEmail().equals(user1.getEmail());
+        if (getUser().equals(user1.getUser())) return true;
+        if (getEmail().equals(user1.getEmail())) return true;
+        return false;
     }
 
     @Override

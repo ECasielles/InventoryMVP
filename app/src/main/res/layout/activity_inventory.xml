@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.usuario.inventorymaterial.ui.inventory.InventoryActivity"
     android:stretchColumns="1"
+    android:id="@+id/android.R.id.content"
     >
 
     <TableRow>

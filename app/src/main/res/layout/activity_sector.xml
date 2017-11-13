@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.usuario.inventorymaterial.ui.sector.SectorActivity"
+    android:id="@+id/android.R.id.content"
     >
 
     <!--AppBarLayout controla el Scroll-->

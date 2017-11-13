@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     app:columnCount="6"
     app:orientation="horizontal"
+    android:id="@+id/android.R.id.content"
     >
 
 

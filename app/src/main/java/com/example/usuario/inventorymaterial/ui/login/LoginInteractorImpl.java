@@ -1,5 +1,10 @@
 package com.example.usuario.inventorymaterial.ui.login;
 
+import android.text.TextUtils;
+
+import com.example.usuario.inventorymaterial.data.db.repository.UserRepository;
+import com.example.usuario.inventorymaterial.utils.CommonUtils;
+
 /**
  * Clase interactor del presentador de la vista Login.
  *
@@ -9,8 +14,6 @@ package com.example.usuario.inventorymaterial.ui.login;
  * @see LoginInteractor.OnLoginFinishedListener
  *
  */
-
-
 public class LoginInteractorImpl {
 
     //Las clases interactor no tienen contrato con nadie, se les pasa
@@ -18,14 +21,13 @@ public class LoginInteractorImpl {
     public void validateCredentials(String user, String password,
                                     LoginInteractor.OnLoginFinishedListener onLoginFinishedListener) {
         //Realiza todas las comprobaciones
-        if (true)
+        if (TextUtils.isEmpty(password))
             onLoginFinishedListener.onPasswordEmptyError();
-        else if (true)
+        else if (TextUtils.isEmpty(user))
             onLoginFinishedListener.onUserEmptyError();
-        else if (true)
+        else if (!CommonUtils.isPasswordValid(password))
             onLoginFinishedListener.ontPasswordError();
-        else
-            //Y es correcto
+        else if (UserRepository.getInstance().validateCredentials(user, password))
             onLoginFinishedListener.onSuccess();
     }
 }

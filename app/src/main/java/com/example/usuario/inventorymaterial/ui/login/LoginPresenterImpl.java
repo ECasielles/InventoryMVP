@@ -11,17 +11,17 @@ package com.example.usuario.inventorymaterial.ui.login;
 public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLoginFinishedListener {
 
     private LoginView loginView;
-    private LoginInteractorImpl loginInteractor;
+    private LoginInteractorImpl loginInteractorImpl;
 
     public LoginPresenterImpl(LoginView loginView) {
         this.loginView = loginView;
         //Cada presentador tiene UN objeto de su Interactor
-        loginInteractor = new LoginInteractorImpl();
+        loginInteractorImpl = new LoginInteractorImpl();
     }
 
     @Override
     public void validateCredentials(String user, String password) {
-        loginInteractor.validateCredentials(user, password, this);
+        loginInteractorImpl.validateCredentials(user, password, this);
     }
     @Override
     public void onUserEmptyError() {
@@ -37,7 +37,16 @@ public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLog
     }
     @Override
     public void onSuccess() {
-
+        loginView.navigateToHome();
+    }
+    /**
+     * Destruye los objetos inicializados en el constructor
+     * poniéndolos a nulo porque LA VISTA SE VA A DESTRUIR
+     */
+    @Override
+    public void onDestroy() {
+        loginView = null;
+        loginInteractorImpl = null;
     }
 
 }

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.usuario.inventorymaterial.ui.dependency.DependencyActivity"
     android:orientation="vertical"
+    android:id="@+id/android.R.id.content"
     >
 
     <!--Con los tres estilos ?attr/... mantenemos el estilo de la lista-->
