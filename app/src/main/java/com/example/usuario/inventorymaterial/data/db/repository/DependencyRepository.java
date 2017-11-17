@@ -3,6 +3,7 @@ package com.example.usuario.inventorymaterial.data.db.repository;
 import com.example.usuario.inventorymaterial.data.db.model.Dependency;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Clase repositorio que genera los datos Dependency
@@ -43,41 +44,41 @@ public class DependencyRepository {
      */
     private void initialize() {
         addDependency(new Dependency(1, "1º Ciclo Formativo Grado Superior",
-                "1CFGS", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "aaa", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
-                "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "bbb", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(1, "1º Ciclo Formativo Grado Superior",
-                "1CFGS", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "ccc", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
-                "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "ddd", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(1, "1º Ciclo Formativo Grado Superior",
-                "1CFGS", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "eee", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
-                "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "fff", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(1, "1º Ciclo Formativo Grado Superior",
-                "1CFGS", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "ggg", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
-                "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "hhh", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(1, "1º Ciclo Formativo Grado Superior",
-                "1CFGS", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "iii", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
-                "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "AAA", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(1, "1º Ciclo Formativo Grado Superior",
-                "1CFGS", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "BBB", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
-                "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "111", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(1, "1º Ciclo Formativo Grado Superior",
-                "1CFGS", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "222", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
-                "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "333", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(1, "1º Ciclo Formativo Grado Superior",
-                "1CFGS", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "%%%", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
-                "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "$$$", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(1, "1º Ciclo Formativo Grado Superior",
-                "1CFGS", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "===", "1CFGS Desarrollo de Aplicaciones Multiplataforma"));
         addDependency(new Dependency(2, "2º Ciclo Formativo Grado Superior",
-                "2CFGS", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
+                "???", "2CFGS Desarrollo de Aplicaciones Multiplataforma"));
     }
     /**
      * Accesor de la clase DependencyRepository
@@ -101,8 +102,11 @@ public class DependencyRepository {
      * @return referencia al objeto ArrayList
      */
     public ArrayList<Dependency> getDependencies() {
+        //Devuelve el arrayList ordenado usando el Comparable
+        Collections.sort(dependencies);
+        //Si quiero que sort use Comparator, se lo paso por segundo parámetro
+        Collections.sort(dependencies, new Dependency.DependencyOrderByShortName());
         return dependencies;
     }
-
 
 }

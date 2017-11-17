@@ -48,11 +48,9 @@ public class LoginViewImpl extends BaseActivity implements LoginView {
             }
         });
     }
-
     @Override
     public void navigateToHome() {
-        Intent intent = new Intent(LoginViewImpl.this, DashboardActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(LoginViewImpl.this, DashboardActivity.class));
     }
     @Override
     public void setUserEmptyError() {

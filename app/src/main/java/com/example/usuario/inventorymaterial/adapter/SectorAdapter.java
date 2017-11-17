@@ -15,16 +15,15 @@ import com.example.usuario.inventorymaterial.data.db.repository.SectorRepository
 
 import java.util.ArrayList;
 
-
 /**
  * Clase Adapter que maneja secciones o armarios de productos.
  *
  * @author Enrique Casielles Lapeira
  * @version 1.0
- * @see Sector
- * @see RecyclerView.Adapter
  * @see ArrayList
+ * @see Sector
  * @see SectorRepository
+ * @see RecyclerView.Adapter
  */
 public class SectorAdapter extends RecyclerView.Adapter<SectorAdapter.SectorViewHolder> {
 

@@ -10,8 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.usuario.inventorymaterial.AccountSettingsActivity;
-import com.example.usuario.inventorymaterial.GeneralSettingsActivity;
+import com.example.usuario.inventorymaterial.ui.settings.AccountSettingsActivity;
+import com.example.usuario.inventorymaterial.ui.settings.GeneralSettingsActivity;
 import com.example.usuario.inventorymaterial.ui.inventory.InventoryActivity;
 import com.example.usuario.inventorymaterial.R;
 import com.example.usuario.inventorymaterial.ui.dependency.DependencyActivity;

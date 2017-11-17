@@ -14,23 +14,31 @@ import com.example.usuario.inventorymaterial.data.db.model.Dependency;
 import com.example.usuario.inventorymaterial.data.db.repository.DependencyRepository;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 /**
  * Clase Adapter que maneja dependencias
  *
  * @author Enrique Casielles Lapeira
- * @version 1.0
+ * @version 2.0
+ * @see ArrayList
  * @see ArrayAdapter
  * @see Dependency
+ * @see DependencyRepository
  */
 public class DependencyAdapter extends ArrayAdapter<Dependency>{
-
-
     /**
-     * Constructor de DependencyAdapter
+     * Constructor de DependencyAdapter. Se crea una copia del ArrayList de
+     * DependencyRepository para que la copia local del Adapter se pueda modificar
+     * sin modificar el repositorio.
      * @param context Contexto de la actividad.
      */
     public DependencyAdapter(@NonNull Context context) {
         super(context, R.layout.item_dependency, DependencyRepository.getInstance().getDependencies());
+        //Ordena por nombre corto usando Comparator
+        //Al heredar de lista, se puede llamar directamente al método sort
+        //sort(new Dependency.DependencyOrderByShortName());
     }
 
     /**
@@ -44,7 +52,6 @@ public class DependencyAdapter extends ArrayAdapter<Dependency>{
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-
         DependencyHolder dependencyHolder;
         View view = convertView;
 
